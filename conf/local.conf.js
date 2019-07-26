@@ -17,6 +17,13 @@ exports.config = {
     'browserstack.local': true
   }],
 
+  reporters: ['browserstack'],
+  reporterOptions: {
+      browserstack: {
+          outputDir: './'
+      }
+  },
+
   logLevel: 'verbose',
   coloredLogs: true,
   screenshotPath: './errorShots/',
