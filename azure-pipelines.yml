@@ -10,8 +10,6 @@ variables:
   browserstackUser: $(BROWSERSTACK_USERNAME)
   browserstackKey: $(BROWSERSTACK_ACCESS_KEY)
 
-steps:
-- script: which npm
-- script: npm i fibers
-- script: npm install
-- script: npm run single
+- task: Npm@1
+  inputs:
+    command: 'install'
