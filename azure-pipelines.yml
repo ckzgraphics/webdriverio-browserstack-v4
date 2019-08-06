@@ -11,6 +11,7 @@ variables:
   browserstackKey: $(BROWSERSTACK_ACCESS_KEY)
 
 steps:
+- script: which npm
 - script: npm i fibers
 - script: npm install
 - script: npm run single
