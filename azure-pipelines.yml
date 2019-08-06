@@ -10,6 +10,12 @@ variables:
   browserstackUser: $(BROWSERSTACK_USERNAME)
   browserstackKey: $(BROWSERSTACK_ACCESS_KEY)
 
+steps:
 - task: Npm@1
   inputs:
     command: 'install'
+
+- task: Npm@1
+  inputs:
+    command: 'custom'
+    customCommand: 'run single'
