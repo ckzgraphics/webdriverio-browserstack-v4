@@ -11,11 +11,9 @@ variables:
   browserstackKey: $(BROWSERSTACK_ACCESS_KEY)
 
 steps:
-- task: Npm@1
+- task: NodeTool@6.9.0 
   inputs:
-    command: 'install'
+    versionSpec: $(node_version)
 
-- task: Npm@1
-  inputs:
-    command: 'custom'
-    customCommand: 'run single'
+- script: npm install
+    
