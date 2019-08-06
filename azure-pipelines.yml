@@ -11,7 +11,6 @@ variables:
   browserstackKey: $(BROWSERSTACK_ACCESS_KEY)
 
 steps:
-- script: npm update
-- script: npm i npm
 - script: npm install
+
 - script: npm run single
