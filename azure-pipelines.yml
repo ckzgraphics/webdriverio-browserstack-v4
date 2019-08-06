@@ -11,9 +11,21 @@ variables:
   browserstackKey: $(BROWSERSTACK_ACCESS_KEY)
 
 steps:
-- task: NodeTool@6.9.0 
+- task: NodeTool@0
   inputs:
-    versionSpec: $(node_version)
+    versionSpec: '6.15.1'
+    checkLatest: false
 
 - script: npm install
+- script: npm list | grep webdriver
+- script: npm run single
+  displayName: 'Run a one-line script'
+- task: PublishTestResults@2
+- task: BrowserStackResults@0
+
+
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'
     
