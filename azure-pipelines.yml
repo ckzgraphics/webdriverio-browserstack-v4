@@ -23,9 +23,13 @@ steps:
 - task: PublishTestResults@2
 - task: BrowserStackResults@0
 
-
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
-    
+
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: '**/REPORT-*.xml'
+    mergeTestResults: true
