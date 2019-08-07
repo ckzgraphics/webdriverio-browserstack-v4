@@ -15,7 +15,10 @@ steps:
   inputs:
     versionSpec: '6.15.1'
     checkLatest: false
-
+- task: BrowserStackConfig@0
+  inputs:
+    BrowserStackServiceEndPoint: 'BrowserStack Connection'
+    
 - script: npm install
 - script: npm list | grep webdriver
 - script: npm run single
