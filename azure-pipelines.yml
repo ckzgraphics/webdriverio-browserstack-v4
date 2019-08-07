@@ -21,7 +21,7 @@ steps:
     
 - script: npm install
 - script: npm list | grep webdriver
-- script: npm run single
+- script: npm run newsingle
   displayName: 'Run a one-line script'
 - task: PublishTestResults@2
 - task: BrowserStackResults@0
