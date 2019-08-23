@@ -16,15 +16,14 @@ steps:
     versionSpec: '6.15.1'
     checkLatest: false
 
-- task: BrowserStackConfig@1
+- task: BrowserStackConfig@0
   inputs:
-    BrowserStackServiceEndPoint: 'bss'
+    BrowserStackServiceEndPoint: 'Browserstack Connection'
 - script: npm install
 - script: npm list | grep webdriver
 - script: npm run single1
   displayName: 'Run a one-line script'
-- task: PublishTestResults@2
-- task: BrowserStackResults@1
+- task: BrowserStackResults@0
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
