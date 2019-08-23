@@ -10,3 +10,14 @@ describe("describe BStack", function() {
   });
   
 });
+
+describe("describe Facebook", function() {
+  it("Open Google", function() {
+    browser.url("https://www.google.com");
+  });
+  
+  it("Open Facebook", function() {
+    browser.url("https://www.facebook.com");
+  });
+  
+});
