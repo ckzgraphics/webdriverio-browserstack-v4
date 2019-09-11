@@ -23,7 +23,7 @@ steps:
 - script: npm list | grep webdriver
 - script: npm run single1
   displayName: 'Run a one-line script'
-  - task: BrowserStackResults@0
+- task: BrowserStackResults@0
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
