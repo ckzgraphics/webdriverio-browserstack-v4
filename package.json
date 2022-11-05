@@ -32,6 +32,6 @@
     "wdio-browserstack-reporter": "~0.1.1"
   },
   "devDependencies": {
-    "wdio-mocha-framework": "^0.2.11"
+    "wdio-mocha-framework": "^0.6.4"
   }
 }
